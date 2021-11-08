@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import styles from "./FareCalculator.module.css";
-import { FaBusAlt } from "react-icons/fa";
+import styles from "./ViewsCommon.module.css";
+import { FaCalculator } from "react-icons/fa";
 import { Tap, TapContainer } from "types/Tap";
 import { TripSummary } from "types/TripSummary";
 import { getTripSummariesFromTaps } from "utils/TapProcessing";
@@ -34,9 +34,10 @@ export const FareCalculator = () => {
 
   return (
     <>
-      <h1 className={styles.mainHeader}>
-        <FaBusAlt /> Little Pay Fair Fare Calculator
-      </h1>
+      <h2 className={styles.subHeader}>
+        <FaCalculator />
+        {""} Fair Fare Calculator
+      </h2>
       <div className={styles.main}>
         {!tapsInput && <input type="file" onChange={(e) => readTapsJSONFile(e)} />}
 
