@@ -6,11 +6,7 @@ import { HeadingLevel2 } from "common/HeadingLevel2";
 export const FAQ = () => {
   return (
     <>
-      <HeadingLevel2
-        icon={FaQuestionCircle}
-        headingText="Imagine if this was a really long piece of text"
-        localizedHeadingKey="description.part2"
-      />
+      <HeadingLevel2 icon={FaQuestionCircle} headingText="FAQ" />
       <div className={styles.main}>
         <h3>A what question?</h3>
         <p>

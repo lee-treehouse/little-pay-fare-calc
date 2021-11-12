@@ -8,10 +8,7 @@ import styles from "./App.module.css";
 import { ThemeContext, Theme } from "theming/ThemeContext";
 
 function App() {
-  type localizationOption = "en" | "it";
-  //type themeOption = "light" | "unicorn";
-  const [language, setLanguage] = useState<localizationOption>("en");
-  const [theme, setTheme] = React.useState(Theme.Light);
+  const [theme, setTheme] = useState(Theme.Light);
 
   return (
     <BrowserRouter>
@@ -19,19 +16,6 @@ function App() {
         <div className="App">
           <div className={styles.navContainer}>
             <nav className={styles.topNav}>
-              <h4>Localization - {language}</h4>
-              <ul>
-                <li>
-                  <button disabled={language === "en"} onClick={() => setLanguage("en")}>
-                    English
-                  </button>
-                </li>
-                <li>
-                  <button disabled={language === "it"} onClick={() => setLanguage("it")}>
-                    Italian
-                  </button>
-                </li>
-              </ul>
               <h4>Theme</h4>
               <ul>
                 <li>
@@ -50,9 +34,7 @@ function App() {
               </ul>
             </nav>
           </div>
-          <Link to="/">
-            <Header />
-          </Link>
+          <Header />
           <ul>
             <li>
               <Link to="/FAQ">FAQ</Link>
