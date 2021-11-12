@@ -46,6 +46,16 @@ export const FareCalculator = () => {
               {`${tripsOutput.length} ${tripsOutput.length === 1 ? "trip" : "trips"} calculated.`}
             </p>
 
+            <button
+              onClick={() => {
+                // Reset state
+                setTripsOutput(undefined);
+                setTapsInput(undefined);
+              }}
+            >
+              Start Again
+            </button>
+
             <p>
               <a
                 href={URL.createObjectURL(
@@ -59,15 +69,6 @@ export const FareCalculator = () => {
               </a>
             </p>
 
-            <button
-              onClick={() => {
-                // Reset state
-                setTripsOutput(undefined);
-                setTapsInput(undefined);
-              }}
-            >
-              Start Again
-            </button>
             {tripsOutput && <TripsTable tripsOutput={tripsOutput} />}
           </>
         )}

@@ -9,8 +9,9 @@ export const Header = () => {
   return (
     <>
       <h1 className={theme === Theme.Unicorn ? styles.mainHeaderUnicorn : styles.mainHeader}>
+        <FaBusAlt />{" "}
         <Link to="/">
-          <FaBusAlt /> brittle<span className={styles.green}>Pay</span>
+          brittle<span className={styles.green}>Pay</span>
         </Link>
       </h1>
     </>
