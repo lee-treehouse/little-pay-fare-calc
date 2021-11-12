@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ViewsCommon.module.css";
+import calcStyles from "./FareCalculator.module.css";
 import { FaCalculator } from "react-icons/fa";
 import { Tap, TapContainer } from "types/Tap";
 import { TripSummary } from "types/TripSummary";
 import { getTripSummariesFromTaps } from "utils/TapProcessing";
+import { HeadingLevel2 } from "common/HeadingLevel2";
+import { formatCurrency, formatDate, formatTime } from "utils/Formatters";
 
 export const FareCalculator = () => {
   const [tapsInput, setTapsInput] = useState<Tap[] | undefined>(undefined);
@@ -34,10 +37,7 @@ export const FareCalculator = () => {
 
   return (
     <>
-      <h2 className={styles.subHeader}>
-        <FaCalculator />
-        {""} Fair Fare Calculator
-      </h2>
+      <HeadingLevel2 icon={FaCalculator} headingText="Fair Fare Calculator" />
       <div className={styles.main}>
         {!tapsInput && <input type="file" onChange={(e) => readTapsJSONFile(e)} />}
 
@@ -70,6 +70,31 @@ export const FareCalculator = () => {
               Start Again
             </button>
           </>
+        )}
+        {tripsOutput && tripsOutput.length > 0 && (
+          <table className={calcStyles.fareTable}>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th colSpan={2}>Trip Start</th>
+                <th colSpan={2}>Trip End</th>
+                <th colSpan={2}></th>
+              </tr>
+            </thead>
+            <tbody>
+              {tripsOutput.map((trip, counter) => (
+                <tr>
+                  <td>{formatDate(trip.started)}</td>
+                  <td>{formatTime(trip.started)}</td>
+                  <td>{trip.fromStopId}</td>
+                  <td>{trip.finished ? formatTime(trip.finished) : " - "}</td>
+                  <td>{trip.toStopId ? trip.toStopId : " - "}</td>
+                  <td>{trip.status}</td>
+                  <td>{formatCurrency(trip.chargeAmount)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         )}
       </div>
     </>

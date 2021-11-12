@@ -1,14 +1,16 @@
 import styles from "./ViewsCommon.module.css";
 import React from "react";
 import { FaQuestionCircle } from "react-icons/fa";
+import { HeadingLevel2 } from "common/HeadingLevel2";
 
 export const FAQ = () => {
   return (
     <>
-      <h2 className={styles.subHeader}>
-        <FaQuestionCircle />
-        {""} FAQ
-      </h2>
+      <HeadingLevel2
+        icon={FaQuestionCircle}
+        headingText="Imagine if this was a really long piece of text"
+        localizedHeadingKey="description.part2"
+      />
       <div className={styles.main}>
         <h3>A what question?</h3>
         <p>

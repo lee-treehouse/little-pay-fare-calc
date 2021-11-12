@@ -1,15 +1,14 @@
-.mainHeader,
-.mainHeaderUnicorn {
+.subHeader,
+.subHeaderUnicorn {
   margin-bottom: 1em;
 }
 
-.mainHeader svg,
-.green,
-.mainHeaderUnicorn svg {
+.subHeader svg,
+.subHeaderUnicorn svg {
   color: #00bf6f;
 }
 
-.mainHeaderUnicorn {
+.subHeaderUnicorn {
   background-image: linear-gradient(
     90deg,
     rgba(255, 0, 0, 1) 0%,
@@ -26,14 +25,4 @@
   );
   background-clip: text;
   color: transparent;
-  text-decoration: none;
-}
-
-a .mainHeader,
-a:link .mainHeader,
-a:visited .mainHeader,
-a:hover .mainHeader,
-a:active .mainHeader {
-  text-decoration: none;
-  color: #444;
 }

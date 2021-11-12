@@ -1,0 +1,44 @@
+body {
+  padding: 0em 1em;
+  line-height: 1;
+  margin: 0 auto;
+  max-width: 50em;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 1em;
+  color: #444;
+}
+.topNav {
+  display: flex;
+  flex-direction: row;
+  font-family: Graphik Web, Arial, sans-serif;
+  font-size: 1rem;
+  align-items: center;
+  margin-top: 5px;
+}
+.topNav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0px 10px 0px 5px;
+}
+
+nav.topNav h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.topNav li {
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.topNav button {
+  cursor: pointer;
+  margin: 0px 2px;
+}
+.navContainer {
+  display: flex;
+  justify-content: flex-end;
+}
