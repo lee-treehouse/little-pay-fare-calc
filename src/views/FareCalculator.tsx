@@ -34,12 +34,32 @@ export const FareCalculator = () => {
     }
   };
 
+  const loadLocalTaps = () => {
+    fetch("taps.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (result) {
+        setTapsInput((result as TapContainer).taps);
+      });
+  };
+
   return (
     <>
       <HeadingLevel2 icon={FaCalculator} headingText="Fair Fare Calculator" />
       <div className={styles.main}>
-        {!tapsInput && <input type="file" onChange={(e) => readTapsJSONFile(e)} />}
-
+        {!tapsInput && (
+          <>
+            <button onClick={() => loadLocalTaps()}>Load Default</button>
+            {` or `}
+            <input type="file" onChange={(e) => readTapsJSONFile(e)} />
+          </>
+        )}
         {tripsOutput && (
           <>
             <p>
