@@ -3,10 +3,10 @@ experimenting with swipable approach defined here
 https://css-tricks.com/under-engineered-responsive-tables/
 */
 
-[role="region"][aria-labelledby] {
+.scrollableTableContainer {
   overflow: auto;
 }
 
-[role="region"][aria-labelledby]:focus {
+scrollableTableContainer:focus {
   outline: 0.1em solid rgba(0, 0, 0, 0.1);
 }

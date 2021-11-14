@@ -12,7 +12,7 @@ export const TripsTable: FunctionComponent<Props> = ({ tripsOutput }) => {
   return (
     <>
       {tripsOutput && tripsOutput.length > 0 && (
-        <div role="region" aria-labelledby="Caption01">
+        <div role="region" aria-labelledby="Caption01" className={styles.scrollableTableContainer}>
           <FareTable>
             <caption id="Caption01">Fare Table</caption>
             <thead>
