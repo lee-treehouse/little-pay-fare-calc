@@ -7,6 +7,6 @@ https://css-tricks.com/under-engineered-responsive-tables/
   overflow: auto;
 }
 
-scrollableTableContainer:focus {
+.scrollableTableContainer:focus {
   outline: 0.1em solid rgba(0, 0, 0, 0.1);
 }
