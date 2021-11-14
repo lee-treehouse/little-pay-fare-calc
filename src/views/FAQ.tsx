@@ -4,7 +4,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 import { HeadingLevel2 } from "common/HeadingLevel2";
 import { HeadingLevel3 } from "common/HeadingLevel3";
 import { formatCurrency } from "utils/Formatters";
-import fareStyles from "common/TripsTable.module.css";
+import { FareTable } from "components/styles/FareTable.styled";
 
 export const FAQ = () => {
   return (
@@ -16,7 +16,7 @@ export const FAQ = () => {
           Here is some explanatory text to accompany the table of fees and charges. If you change
           your mind about a trip (tap on, then immediately tap off) no fees will apply.
         </p>
-        <table className={fareStyles.fareTable}>
+        <FareTable>
           <thead>
             <tr>
               <th>Trip Start</th>
@@ -71,7 +71,7 @@ export const FAQ = () => {
               <td>{formatCurrency(7.3)}</td>
             </tr>
           </tbody>
-        </table>
+        </FareTable>
         <HeadingLevel3 headingText="A what question?" />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eligendi eaque

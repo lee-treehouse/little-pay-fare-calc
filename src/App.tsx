@@ -6,6 +6,7 @@ import Home from "views/Home";
 import { FareCalculator } from "./views/FareCalculator";
 import styles from "./App.module.css";
 import { ThemeContext, Theme } from "theming/ThemeContext";
+import Footer from "common/Footer";
 
 function App() {
   const [theme, setTheme] = useState(Theme.Light);
@@ -49,6 +50,7 @@ function App() {
             <Route path="/Calculator" element={<FareCalculator />}></Route>
             <Route path="/" element={<Home />}></Route>
           </Routes>
+          <Footer></Footer>
         </div>
       </ThemeContext.Provider>
     </BrowserRouter>
