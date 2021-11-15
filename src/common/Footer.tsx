@@ -5,7 +5,7 @@ import { FaItunesNote } from "react-icons/fa";
 const Footer = () => {
   return (
     <StyledFooter color="blue">
-      <FaItunesNote /> This footer is brought to you by Kate B. 1F41D 🐝 &#129409;
+      <FaItunesNote /> This footer is proudly brought to you by Kate T B. 1F41D 🐝 &#129409;
     </StyledFooter>
   );
 };
