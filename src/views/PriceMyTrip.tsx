@@ -85,7 +85,7 @@ export const PriceMyTrip = () => {
         </p>
         <button onClick={calculateTripCost}>Calculate</button>
         {result === 0 && <p>Free</p>}
-        {result && result !== 0 && <p>Fee: {formatCurrency(result)}</p>}
+        {result !== undefined && result !== 0 && <p>{formatCurrency(result)}</p>}
       </div>
     </>
   );
