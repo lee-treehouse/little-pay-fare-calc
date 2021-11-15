@@ -2,6 +2,7 @@ import { Header } from "common/Header";
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { FAQ } from "views/FAQ";
+import { PriceMyTrip } from "views/PriceMyTrip";
 import Home from "views/Home";
 import { FareCalculator } from "./views/FareCalculator";
 import styles from "./App.module.css";
@@ -41,12 +42,16 @@ function App() {
               <Link to="/FAQ">FAQ</Link>
             </li>
             <li>
+              <Link to="/PriceMyTrip">Price My Trip</Link>
+            </li>
+            <li>
               <Link to="/Calculator">Fair Fare Calculator</Link>
             </li>
           </ul>
 
           <Routes>
             <Route path="/FAQ" element={<FAQ />}></Route>
+            <Route path="/PriceMyTrip" element={<PriceMyTrip />}></Route>
             <Route path="/Calculator" element={<FareCalculator />}></Route>
             <Route path="/" element={<Home />}></Route>
           </Routes>
