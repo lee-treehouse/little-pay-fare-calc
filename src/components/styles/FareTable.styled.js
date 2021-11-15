@@ -8,6 +8,10 @@ export const FareTable = styled.table`
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
+  caption {
+    text-align: left;
+  }
+
   thead tr {
     background-color: #00bf6f;
     color: #ffffff;

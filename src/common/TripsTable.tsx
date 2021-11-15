@@ -2,6 +2,7 @@ import { FareTable } from "components/styles/FareTable.styled";
 import React, { FunctionComponent } from "react";
 import { TripSummary } from "types/TripSummary";
 import { formatCurrency, formatDate, formatTime } from "utils/Formatters";
+import { HeadingLevel3 } from "./HeadingLevel3";
 import styles from "./TripsTable.module.css";
 
 interface Props {
@@ -14,7 +15,11 @@ export const TripsTable: FunctionComponent<Props> = ({ tripsOutput }) => {
       {tripsOutput && tripsOutput.length > 0 && (
         <div role="region" aria-labelledby="Caption01" className={styles.scrollableTableContainer}>
           <FareTable>
-            <caption id="Caption01">Fare Table</caption>
+            <caption id="Caption01">
+              <h3>
+                <HeadingLevel3 headingText="Fare Table" />
+              </h3>
+            </caption>
             <thead>
               <tr>
                 <th>Date</th>
