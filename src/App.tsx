@@ -6,6 +6,7 @@ import { PriceMyTrip } from "views/PriceMyTrip";
 import Home from "views/Home";
 import { FareCalculator } from "./views/FareCalculator";
 import styles from "./App.module.css";
+import { BuyProducts } from "./views/BuyProducts";
 import { ThemeContext, Theme } from "theming/ThemeContext";
 import Footer from "common/Footer";
 
@@ -37,7 +38,7 @@ function App() {
             </nav>
           </div>
           <Header />
-          <ul>
+          <ul className={styles.nav}>
             <li>
               <Link to="/FAQ">FAQ</Link>
             </li>
@@ -47,12 +48,16 @@ function App() {
             <li>
               <Link to="/Calculator">Fair Fare Calculator</Link>
             </li>
+            <li>
+              <Link to="/BuyProducts">Buy Products</Link>
+            </li>
           </ul>
 
           <Routes>
             <Route path="/FAQ" element={<FAQ />}></Route>
             <Route path="/PriceMyTrip" element={<PriceMyTrip />}></Route>
             <Route path="/Calculator" element={<FareCalculator />}></Route>
+            <Route path="/BuyProducts" element={<BuyProducts />}></Route>
             <Route path="/" element={<Home />}></Route>
           </Routes>
           <Footer></Footer>

@@ -42,3 +42,10 @@ nav.topNav h4 {
   display: flex;
   justify-content: flex-end;
 }
+
+.nav li {
+  display: inline;
+  border: 1px solid green;
+  margin: 5px;
+  padding: 5px;
+}
