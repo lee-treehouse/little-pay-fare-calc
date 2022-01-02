@@ -1611,6 +1611,11 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
+"@lee-treehouse/tiny-npm-library@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@lee-treehouse/tiny-npm-library/-/tiny-npm-library-2.0.0.tgz#cc604211bf177fb06624a3073cf6ed0daa7cefb1"
+  integrity sha512-domCPIKYUpbj1zHqGbbSyN1XoYi2U9EgJKVBme6ybVP01qg8dOZj5BwHcwOPKSpmK46Qzj+zXlob0KLj0DUHFA==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
