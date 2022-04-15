@@ -1,12 +1,13 @@
 import styles from "./ViewsCommon.module.css";
 import buyStyles from "./BuyProducts.module.css";
-
 import React, { useEffect } from "react";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { HeadingLevel2 } from "common/HeadingLevel2";
 import { HeadingLevel3 } from "common/HeadingLevel3";
 import { ProductCard } from "common/ProductCard";
 import tiny from "@lee-treehouse/tiny-npm-library";
+
+const USE_CHECKOUT = false;
 
 declare global {
   interface Window {
@@ -20,10 +21,10 @@ export const BuyProducts = () => {
   console.log(tinyThing);
 
   useEffect(() => {
+    if (!USE_CHECKOUT) return;
+
     //the first time this component loads, try to do a checkout in littlepay-dropin-ui div
-    const clientToken =
-      "eyJhdXRoX3Rva2VuIjoiZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnlaWEYxWlhOMFgzUjVjR1VpT2lKRlEwOU5YME5CVWtSZlZFOUxSVTVKVTBGVVNVOU9JaXdpY0dGeWRHbGphWEJoYm5SZmFXUWlPaUpzY0NJc0luQmhlVzFsYm5SZmFXNTBaVzUwWDJsa0lqb2ljR2xmTWpWbVlUazBNbUV0WVRrMVlTMDBORGswTFRrd05qY3RaamN4TURGalpURmxNR000SWl3aVkzVnpkRzl0WlhKZmNISnZabWxzWlY5cFpDSTZJbU53WHpNMFpESmhaRFV4TFdVeU9XVXROR1UxWVMwNE9XRmtMV1ptWW1VellXVTRaR1k1TmlJc0ltNWhiV1VpT2lKRlEwOU5YME5CVWtSZlZFOUxSVTVKVTBGVVNVOU9JaXdpWlhod0lqb3hOalF4TURrd05qVTBMamN6TVgwLmhPOEw4UGVSbFlDWlJVaEpsamYyZ3dJSERfZGhVVlY4QVM0TUdGTVZNZXMiLCJodHRwc19hcGkiOiJodHRwczovL2NoZWNrb3V0LmRldjEubGl0dGxlcGF5LmNvbS9jdXN0b21lci92MSJ9";
-    console.log(clientToken);
+    const clientToken = "";
     const littlePay = window.LittlePay({
       clientToken: clientToken,
       targetElementId: "Alternative-drop-in",
@@ -41,7 +42,6 @@ export const BuyProducts = () => {
         },
       },
     });
-    console.log(littlePay);
     littlePay.makePayment(
       (e: any) => {
         console.log(`<h1>Error</h1><p>Check your console.</p>${e}`);
@@ -52,7 +52,7 @@ export const BuyProducts = () => {
         );
       }
     );
-    // littlePay.makePayment();
+    littlePay.makePayment();
   }, []);
 
   return (
