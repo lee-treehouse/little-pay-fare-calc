@@ -1,8 +1,8 @@
 View this project hosted on AWS Amplify at the following URL: https://main.d9umppj6r6ld0.amplifyapp.com/
 
-# Getting Started with Little Pay Fair Fare Calculator
+# Getting Started with Brittlepay Fair Fare Calculator
 
-This Project is a Littlepay Coding Exercise by Lee Taylor. Instructions for this exercise have been provided in the public folder of this project.
+This Project is a Brittlepay Coding Exercise by Lee Treehouse. Instructions for this exercise have been provided in the public folder of this project.
 
 To successfully use this project, you will need a well formed taps.json file as described in the coding exercise description. If needed, one has been provided in the public folder of this project.
 
