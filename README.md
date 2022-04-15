@@ -1,3 +1,5 @@
+View this project hosted on AWS Amplify at the following URL: https://main.d9umppj6r6ld0.amplifyapp.com/
+
 # Getting Started with Little Pay Fair Fare Calculator
 
 This Project is a Littlepay Coding Exercise by Lee Taylor. Instructions for this exercise have been provided in the public folder of this project.
